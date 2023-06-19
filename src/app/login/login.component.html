@@ -1,0 +1,48 @@
+
+
+
+<div class="container" style="margin: auto;">
+  <button type="button" class="btn-outline-primary active btn-lg" *ngIf="formlogin == true" (click)="showlogin()">Login</button> 
+     <button  type="button" class="btn-outline-primary btn-lg"  *ngIf="formlogin != true" (click)="showlogin()">Login</button> 
+   <button  type="button" class="btn-outline-primary btn-lg" *ngIf="formsignup != true" (click)="showsignup()"> Sign up</button>
+
+   <button  type="button" class="btn-outline-primary active btn-lg" *ngIf="formsignup == true" (click)="showsignup()"> Sign up</button>
+    <form action="#" *ngIf="formlogin == true">
+      <div class="title">Login</div>
+      <div class="input-box underline">
+        <input type="text" placeholder="Enter Your Username" required>
+        <div class="underline"></div>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Enter Your Password" required>
+        <div class="underline"></div>
+      </div>
+      <div class="input-box button">
+        <input type="submit" name="" value="Continue">
+      </div>
+    </form>
+
+
+
+
+
+  
+
+
+  
+    <form action="#" *ngIf="formsignup == true">
+      <div class="title">Signup</div>
+      <div class="input-box underline">
+        <input type="text" placeholder="Enter Your Username" required>
+        <div class="underline"></div>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Enter Your Password" required>
+        <div class="underline"></div>
+      </div>
+      <div class="input-box button">
+        <input type="submit" name="" value="Create">
+      </div>
+    </form>
+
+  </div>
