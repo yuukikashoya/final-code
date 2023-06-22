@@ -1,5 +1,8 @@
 
-
+<div *ngFor="let a of chats  | async;let i = index;">
+  <div *ngIf="a"></div>
+  <button class="btn btn-primary">{{a.username}}</button>
+</div>
 
 
   <div class="container" >
@@ -8,7 +11,7 @@
                 <button class="btn-primary" (click)="logout()">ChatRoom</button>
           <section class="chat-window " >
     
-            <div *ngFor="let b of chats | async;let i = index">
+            <div *ngFor="let b of chats  | async;let i = index;">
             <article class="msg-container msg-remote" id="msg-0"  *ngIf= "b && this.iid != b.username">
               <div class="msg-box">
                 <img class="user-img" id="user-0" src="//gravatar.com/avatar/00034587632094500000000000000000?d=retro" />

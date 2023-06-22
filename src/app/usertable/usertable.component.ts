@@ -1,10 +1,12 @@
 
 import { Component, OnInit } from '@angular/core';
-import {  AngularFireDatabase } from '@angular/fire/compat/database';
-import { Database, ref, set,} from '@angular/fire/database';
+
+import { Database, ref, set } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { formatDate } from '@angular/common';
 import { Router } from '@angular/router';
+import { map } from 'rxjs/operators';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Component({
   selector: 'app-usertable',
@@ -15,11 +17,27 @@ export class UsertableComponent implements OnInit {
 
   chats!: Observable<any[]>;
   session =  sessionStorage.getItem("id");
+  originalMessage$: Observable<any[]>;
+  uppercaseMessage$: Observable<any[]>;
+
 
 
   constructor(public database: Database, private FireDb: AngularFireDatabase,private router:Router) { 
     this.chats = FireDb.list('/chat/'+ 'chatroom').valueChanges();
- 
+    this.originalMessage$ = FireDb.list('/chat/'+ 'chatroom').valueChanges();
+
+    this.uppercaseMessage$ = this.originalMessage$.pipe(
+      map((username: any) => username.toUpperCase())
+      );
+
+
+
+
+
+      // this.FireDb.object('/chat/'+ 'chatroom/20232106025501/username').valueChanges().subscribe((username: any) => {
+      //   this.temporaryusername = username;
+      //   console.log(this.temporaryusername)
+      // });
   }
 
   ngOnInit(): void {
