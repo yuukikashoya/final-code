@@ -75,7 +75,7 @@ date:any
     'x': 'MIJAV', 
     'y': 'MIAWJ',
     'z': 'CAT',
-    '': '*',
+  
 };
 revisemap: Record<any, string> = {
   'muwaa': 'A',
@@ -141,7 +141,7 @@ revisemap: Record<any, string> = {
   'MIJAV': 'x',
   'MIAWJ': 'y',
   'CAT': 'z',
-  '*': '',
+
 };
 back!: string[];
  constructor(public database: Database,private FireDb: AngularFireDatabase) { 
@@ -149,6 +149,12 @@ back!: string[];
        this.FireDb.object('/secret/' + 'chatroom/chat').valueChanges().subscribe((chat: any) => {
          this.fromdatabase = chat;
 
+    
+
+
+setTimeout(() => {
+  this.delayedFunction();
+}, 100);
 
        });
        this.FireDb.object('/secret/' + 'chatroom/date').valueChanges().subscribe((d: any) => {
@@ -156,31 +162,26 @@ back!: string[];
 
 
       });
-      setTimeout(() => {
-        this.delayedFunction();
-      }, 2000);
+
 
  }
  delayedFunction() {
-this.back = this.fromdatabase.split('*');
-
-for(let i = 0; i < this.back.length; i++){
-
-  const gett = this.back[i];
-  const changedchat = this.revisemap[gett];
-
-  if (changedchat) {
-    this.decoded += changedchat;
-
-  } else {
-    this.decoded += gett ;
- 
+  this.decoded = "";  
+           this.back = this.fromdatabase.split('*');
+  for(let i = 0; i < this.back.length; i++){
+         
+    const gett = this.back[i];
+    const changedchat = this.revisemap[gett];
+  
+    if (changedchat) {
+      this.decoded += changedchat;
+  
+    } else {
+      this.decoded += gett ;
+   
+    }
   }
 }
-
-}
-
-
 chat = ""
 changed: string = '';
 test = "z"
@@ -209,9 +210,29 @@ sendchat() {
   }
      this.chat = ""
    this.changed= ""
+
+    this.decoded = ""
 }
  
+activesend=true
+activeget = false
+activehacker = false
 
+showsend(){
+  this.activesend=true
+  this.activeget = false
+  this.activehacker = false
+}
+showget(){
+  this.activesend=false
+  this.activeget = true
+  this.activehacker = false
+}
+showhacker(){
+  this.activesend=false
+  this.activeget = false
+  this.activehacker = true
+}
 
 
 

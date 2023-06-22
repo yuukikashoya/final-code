@@ -1,4 +1,19 @@
-<div class="container" >
+<nav class="navbar  bg-dark" style="display: block;">
+
+     
+      
+
+ 
+          <button  (click)="showsend()" class="btn btn-dark nor" *ngIf="this.activesend != true">ChatRoom Sender POV</button>
+          <button  (click)="showsend()" class="btn btn-light nor " *ngIf="this.activesend == true">ChatRoom Sender POV</button>
+          <button  (click)="showget()" class="btn btn-dark nor" *ngIf="this.activeget != true">ChatRoom Receiver POV</button>
+          <button  (click)="showget()" class="btn btn-light  nor" *ngIf="this.activeget == true">ChatRoom Receiver POV</button>
+          <button  (click)="showhacker()"class="btn btn-dark nor" *ngIf="this.activehacker != true">ChatRoom Hacker POV</button>
+          <button  (click)="showhacker()"class="btn btn-light nor " *ngIf="this.activehacker == true">ChatRoom Hacker POV</button>
+         
+ 
+</nav>
+<div class="container"  *ngIf="this.activesend == true">
 
     <section class="chatbox"#scrollframe >
               <button class="btn-primary" >ChatRoom Sender POV</button>
@@ -35,7 +50,7 @@
       </form>
     </section>
 </div>
-<div class="container" >
+<div class="container"  *ngIf="this.activeget == true">
 
   <section class="chatbox"#scrollframe >
             <button class="btn-primary" >ChatRoom Receiver POV</button>
@@ -66,7 +81,7 @@
 
   </section>
 </div>
-<div class="container" >
+<div class="container"  *ngIf="this.activehacker == true">
 
   <section class="chatbox"#scrollframe >
             <button class="btn-primary" >ChatRoom Hacker POV</button>

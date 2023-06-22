@@ -135,3 +135,21 @@
   .container{
     margin: auto;
   }
+
+
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+  .cancelbtn {
+float: left;
+  }
+
+
+
+  .nor{
+    cursor: pointer;
+  }
