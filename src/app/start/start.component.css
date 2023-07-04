@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Arcade+Classic&display=swap');
+
+.arcade-font {
+  font-family: 'Arcade Classic', sans-serif;
+  /* Add any additional CSS styles as needed */
+}
+
+.ko {
+    font-family: 'click the Cat to START', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background-color: transparent;
+ 
+}
+.button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    height: 15em;
+    width: 20em;
+    outline: none;
+}
+h1,p{
+    position: sticky; 
+   
+    text-align: center;
+    color: white;
+
+}

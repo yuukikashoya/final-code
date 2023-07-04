@@ -19,7 +19,11 @@
   .chat-window {
       flex: auto;
       max-height: calc(100% - 60px);
-      background: #2f323b;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+
       overflow: auto;
   }
   .chat-input {
@@ -152,4 +156,23 @@ float: left;
 
   .nor{
     cursor: pointer;
+    font-size: 15px;
   }
+  .bot{
+    background-color: transparent;
+    outline: none;
+    color: aliceblue;
+    margin-right: 2em;
+    font-size: 1.5em;
+  }
+.img{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+background-image: url(https://wallpaperaccess.com/full/307503.jpg);  
+width: 100vw;
+height: 100vh;
+
+}

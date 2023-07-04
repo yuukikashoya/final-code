@@ -1,23 +1,24 @@
-<nav class="navbar  bg-dark" style="display: block;">
+<div class="img"><nav class="navbar  bg-tranparent" style="display: block;margin: auto;">
 
      
       
-
- 
-          <button  (click)="showsend()" class="btn btn-dark nor" *ngIf="this.activesend != true">ChatRoom Sender POV</button>
-          <button  (click)="showsend()" class="btn btn-light nor " *ngIf="this.activesend == true">ChatRoom Sender POV</button>
-          <button  (click)="showget()" class="btn btn-dark nor" *ngIf="this.activeget != true">ChatRoom Receiver POV</button>
-          <button  (click)="showget()" class="btn btn-light  nor" *ngIf="this.activeget == true">ChatRoom Receiver POV</button>
-          <button  (click)="showhacker()"class="btn btn-dark nor" *ngIf="this.activehacker != true">ChatRoom Hacker POV</button>
-          <button  (click)="showhacker()"class="btn btn-light nor " *ngIf="this.activehacker == true">ChatRoom Hacker POV</button>
-         
- 
+<div style="text-align: center;font-size: 2em;outline: none;">
+ <button  class="glyphicon glyphicon-home bot"  routerLink="/start"></button>
+          <button  (click)="showsend()" class="btn btn-dark  nor" *ngIf="this.activesend != true">Cat Sender POV</button>
+          <button  (click)="showsend()" class="btn btn-light nor " *ngIf="this.activesend == true">Cat Sender POV</button>
+          <button  (click)="showget()" class="btn btn-dark nor" *ngIf="this.activeget != true">Cat Receiver POV</button>
+          <button  (click)="showget()" class="btn btn-light  nor" *ngIf="this.activeget == true">Cat Receiver POV</button>
+          <button  (click)="showhacker()"class="btn btn-dark nor" *ngIf="this.activehacker != true">Cat Hacker POV</button>
+          <button  (click)="showhacker()"class="btn btn-light nor " *ngIf="this.activehacker == true">Cat Hacker POV</button>
+          <button  (click)="showtable()"class="btn btn-dark nor" *ngIf="this.table != true">Show Alpabit table</button>
+          <button  (click)="showtable()"class="btn btn-light nor " *ngIf="this.table == true">Show Alpabit table</button>
+ </div>
 </nav>
 <div class="container"  *ngIf="this.activesend == true">
 
     <section class="chatbox"#scrollframe >
               <button class="btn-primary" >ChatRoom Sender POV</button>
-        <section class="chat-window " >
+        <section class="chat-window " style="  background-image: url(https://media.tenor.com/bCfpwMjfAi0AAAAC/cat-typing.gif);  ">
   
           <div>
 
@@ -54,7 +55,7 @@
 
   <section class="chatbox"#scrollframe >
             <button class="btn-primary" >ChatRoom Receiver POV</button>
-      <section class="chat-window " >
+      <section class="chat-window "style="  background-image: url(https://media.tenor.com/415n58OZ9CYAAAAd/cat-reads-reading.gif);  " >
 
         <div>
         <article class="msg-container msg-remote" id="msg-0">
@@ -85,8 +86,8 @@
 
   <section class="chatbox"#scrollframe >
             <button class="btn-primary" >ChatRoom Hacker POV</button>
-      <section class="chat-window " >
-
+      <section class="chat-window "style="background-image: url(https://media.tenor.com/xTvpjzTNfZMAAAAM/despairiounge-cat.gif);  " >
+      
         <div>
         <article class="msg-container msg-remote" id="msg-0">
           <div class="msg-box">
@@ -111,4 +112,277 @@
     </section>
 
   </section>
+
 </div>
+
+
+<div class="container" style="font-size: 20px;" *ngIf="this.table == true">
+
+  <table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Letter</th>
+        </tr>
+    </thead>
+  <tbody>
+    <tr>
+      <td>puss</td>
+      <td>space</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>next word</td>
+</tr>
+    <tr>
+        <td>muwaa</td>
+        <td>A</td>
+    </tr>
+    <tr>
+        <td>meo</td>
+        <td>B</td>
+    </tr>
+    <tr>
+        <td>meong</td>
+        <td>C</td>
+    </tr>
+    <tr>
+        <td>miyu</td>
+        <td>D</td>
+    </tr>
+    <tr>
+        <td>meow</td>
+        <td>E</td>
+    </tr>
+    <tr>
+        <td>miaau</td>
+        <td>F</td>
+    </tr>
+    <tr>
+        <td>miaou</td>
+        <td>G</td>
+    </tr>
+    <tr>
+        <td>miau</td>
+        <td>H</td>
+    </tr>
+    <tr>
+        <td>miauw</td>
+        <td>I</td>
+    </tr>
+    <tr>
+        <td>ngiao1</td>
+        <td>J</td>
+    </tr>
+    <tr>
+        <td>miu1</td>
+        <td>K</td>
+    </tr>
+    <tr>
+        <td>miao</td>
+        <td>L</td>
+    </tr>
+    <tr>
+        <td>miaow</td>
+        <td>M</td>
+    </tr>
+    <tr>
+        <td>miyav</td>
+        <td>N</td>
+    </tr>
+    <tr>
+        <td>miav</td>
+        <td>O</td>
+    </tr>
+    <tr>
+        <td>ngiyaw</td>
+        <td>P</td>
+    </tr>
+    <tr>
+        <td>miyau</td>
+        <td>Q</td>
+    </tr>
+    <tr>
+        <td>meogre</td>
+        <td>R</td>
+    </tr>
+    <tr>
+        <td>mjau</td>
+        <td>S</td>
+    </tr>
+    <tr>
+        <td>niaou</td>
+        <td>T</td>
+    </tr>
+    <tr>
+        <td>myau</td>
+        <td>U</td>
+    </tr>
+    <tr>
+        <td>mjauu</td>
+        <td>V</td>
+    </tr>
+    <tr>
+        <td>ngiau</td>
+        <td>W</td>
+    </tr>
+    <tr>
+        <td>mijav</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td>miawj</td>
+        <td>Y</td>
+    </tr>
+    <tr>
+        <td>cat</td>
+        <td>Z</td>
+    </tr>
+    <tr>
+        <td>qwe</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>asd</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>zxc</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>rty</td>
+        <td>4</td>
+    </tr>
+    <tr>
+      <td>fgh</td>
+      <td>5</td>
+  </tr>
+  <tr>
+      <td>vbn</td>
+      <td>6</td>
+  </tr>
+  <tr>
+      <td>uio</td>
+      <td>7</td>
+  </tr>
+  <tr>
+      <td>jkl</td>
+      <td>8</td>
+  </tr>
+  <tr>
+      <td>ert</td>
+      <td>9</td>
+  </tr>
+  <tr>
+      <td>lkj</td>
+      <td>0</td>
+  </tr>
+
+  <tr>
+      <td>MUWAA</td>
+      <td>a</td>
+  </tr>
+  <tr>
+      <td>MEO</td>
+      <td>b</td>
+  </tr>
+  <tr>
+      <td>MEONG</td>
+      <td>c</td>
+  </tr>
+  <tr>
+      <td>MIYU</td>
+      <td>d</td>
+  </tr>
+  <tr>
+      <td>MEOW</td>
+      <td>e</td>
+  </tr>
+  <tr>
+      <td>MIAAU</td>
+      <td>f</td>
+  </tr>
+  <tr>
+      <td>MIAOU</td>
+      <td>g</td>
+  </tr>
+  <tr>
+      <td>MIAU</td>
+      <td>h</td>
+  </tr>
+  <tr>
+      <td>MIAUW</td>
+      <td>i</td>
+  </tr>
+  <tr>
+      <td>NGIAO1</td>
+      <td>j</td>
+  </tr>
+  <tr>
+      <td>MIU1</td>
+      <td>k</td>
+  </tr>
+  <tr>
+      <td>MIAO</td>
+      <td>l</td>
+  </tr>
+  <tr>
+      <td>MIAOW</td>
+      <td>m</td>
+  </tr>
+  <tr>
+      <td>MIYAV</td>
+      <td>n</td>
+  </tr>
+  <tr>
+      <td>MIAV</td>
+      <td>o</td>
+  </tr>
+  <tr>
+      <td>NGIYAW</td>
+      <td>p</td>
+  </tr>
+  <tr>
+      <td>MIYAU</td>
+      <td>q</td>
+  </tr>
+  <tr>
+      <td>MEOGRE</td>
+      <td>r</td>
+  </tr>
+  <tr>
+      <td>MJAU</td>
+      <td>s</td>
+  </tr>
+  <tr>
+      <td>NIAOU</td>
+      <td>t</td>
+  </tr>
+  <tr>
+      <td>MYAU</td>
+      <td>u</td>
+  </tr>
+  <tr>
+      <td>MJAUU</td>
+      <td>v</td>
+  </tr>
+  <tr>
+      <td>NGIAU</td>
+      <td>w</td>
+  </tr>
+  <tr>
+    <td>MIJAV</td>
+    <td>x</td>
+</tr>
+<tr>
+    <td>MIAWJ</td>
+    <td>y</td>
+</tr>
+<tr>
+    <td>CAT</td>
+    <td>z</td>
+</tr>
+</tbody>
+</table>
+</div></div>

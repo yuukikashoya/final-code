@@ -217,21 +217,31 @@ sendchat() {
 activesend=true
 activeget = false
 activehacker = false
+table = false
 
 showsend(){
   this.activesend=true
   this.activeget = false
   this.activehacker = false
+  this.table = false
 }
 showget(){
   this.activesend=false
   this.activeget = true
   this.activehacker = false
+  this.table = false
 }
 showhacker(){
   this.activesend=false
   this.activeget = false
   this.activehacker = true
+  this.table = false
+}
+showtable(){
+  this.activesend=false
+  this.activeget = false
+  this.activehacker = false
+  this.table = true
 }
 
 
