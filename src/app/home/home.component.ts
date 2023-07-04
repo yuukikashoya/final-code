@@ -190,28 +190,17 @@ sendchat() {
 
   const datenow = formatDate(new Date(), ' hh:mma MMM/dd/YYYY', 'en')
 
-  for (let i = 0; i < this.chat.length; i++) {
-    const gett = this.chat[i];
-    const changedchat = this.RecordMap[gett];
 
-    if (changedchat) {
-      this.changed += changedchat + '*';
-
-    } else {
-      this.changed += gett ;
-   
-    }
     set(ref(this.database, 'secret/' + 'chatroom'), {
 
-      chat: this.changed,
+      chat: this.chat,
       date: datenow,
       });
 
-  }
      this.chat = ""
    this.changed= ""
 
-    this.decoded = ""
+  
 }
  
 activesend=true
