@@ -176,3 +176,7 @@ width: 100vw;
 height: 100vh;
 
 }
+.table-container{
+    overflow: auto;
+    max-height: 20em;
+}
