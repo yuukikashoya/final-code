@@ -1,16 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Arcade+Classic&display=swap');
+    
 
-.arcade-font {
-  font-family: 'Arcade Classic', sans-serif;
-  /* Add any additional CSS styles as needed */
-}
-h1,p{
-    position: sticky; 
-   
-    text-align: center;
-    color: white;
-
-}
 
 
 ::-webkit-scrollbar {
@@ -98,7 +87,6 @@ h1,p{
       width: auto;
       float: left;
       box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
-      margin-top: 25em;
   }
   .user-img {
       display: inline-block;
@@ -121,7 +109,7 @@ h1,p{
       display: inline-block;
       font-size: 11pt;
       line-height: 13pt;
-      color: rgb(255, 255, 255);
+      color: rgba(255,255,255,.7);
       margin: 0 0 4px 0;
   }
   .msg:first-of-type {
@@ -142,7 +130,6 @@ h1,p{
       border-radius: 6px 0 0 6px;
       background: #2671ff;
       float: right;
-    
   }
   .msg-self .user-img {
       margin: 0 0 10px 10px;
@@ -174,7 +161,6 @@ float: left;
   .nor{
     cursor: pointer;
     font-size: 15px;
-    color: white;
   }
   .bot{
     background-color: transparent;
@@ -198,18 +184,3 @@ height: 100vh;
     overflow: auto;
     max-height: 20em;
 }
-
-
-
-@keyframes rgbAnimation {
-    0% { color: #FFCC00; } /* Bright orange (opposite to blue) */
-    25% { color: #00ff55; } /* Magenta (opposite to yellow) */
-    50% { color: #00fffb; } /* Lime green (opposite to blue and yellow) */
-    75% { color: #001eff; } /* Pink (opposite to blue) */
-    100% { color: #ff00ee; } /* Bright orange */
-  }
-  
-  .rgb-effect {
-    animation: rgbAnimation 4s linear infinite;
-  }
-

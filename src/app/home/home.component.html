@@ -1,21 +1,24 @@
-<div class="img"><nav class="navbar  bg-tranparent" style="display: block;margin: auto;">
 
-     
+<div class="img">
+
+    <nav class="navbar bg-dark" style="display: block; margin: auto;">
+        <div style="text-align: center; font-size: 2em; outline: none;">
+          <button class="btn btn-link" routerLink="/start">
+            <span class="glyphicon glyphicon-home bot"></span>
+          </button>
       
-<div style="text-align: center;font-size: 2em;outline: none;">
- <button  class="glyphicon glyphicon-home bot"  routerLink="/start"></button>
-          <button  (click)="showsend()" class="btn btn-dark  nor" *ngIf="this.activesend != true">Cat Sender POV</button>
-          <button  (click)="showsend()" class="btn btn-light nor " *ngIf="this.activesend == true">Cat Sender POV</button>
-          <button  (click)="showget()" class="btn btn-dark nor" *ngIf="this.activeget != true">Cat Receiver POV</button>
-          <button  (click)="showget()" class="btn btn-light  nor" *ngIf="this.activeget == true">Cat Receiver POV</button>
-          <button  (click)="showhacker()"class="btn btn-dark nor" *ngIf="this.activehacker != true">Cat Hacker POV</button>
-          <button  (click)="showhacker()"class="btn btn-light nor " *ngIf="this.activehacker == true">Cat Hacker POV</button>
-          <button  (click)="showtable()"class="btn btn-dark nor" *ngIf="this.table != true">Show Alpabit table</button>
-          <button  (click)="showtable()"class="btn btn-light nor " *ngIf="this.table == true">Show Alpabit table</button>
-        
- </div>
-</nav>
-  <h2 style="text-align: center;color: white;background-color: black;">please use the Catcrypt Alpabit to hide your message</h2>
+          <button (click)="showsend()" class="btn  nor" *ngIf="!activesend || activeget || activehacker">
+            Cat Sender POV
+          </button>
+          <button (click)="showget()" class="btn  nor" *ngIf="!activeget || activesend || activehacker">
+            Cat Receiver POV
+          </button>
+          <button (click)="showhacker()" class="btn  nor" *ngIf="!activehacker || activesend || activeget">
+            Cat Hacker POV
+          </button>
+        </div>
+      </nav>
+    <h1 class="rgb-effect">Catcrypt</h1>
 <div class="container"  *ngIf="this.activesend == true">
 
     <section class="chatbox"#scrollframe >

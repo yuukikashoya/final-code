@@ -4,7 +4,13 @@
   font-family: 'Arcade Classic', sans-serif;
   /* Add any additional CSS styles as needed */
 }
+h1,p{
+    position: sticky; 
+   
+    text-align: center;
+    color: white;
 
+}
 .ko {
     font-family: 'click the Cat to START', cursive;
     display: flex;
@@ -16,20 +22,15 @@
  
 }
 .button {
+    margin-top: 9em;
     padding: 10px 20px;
     background-color: transparent;
     color: white;
     font-size: 18px;
     border: none;
     cursor: pointer;
-    height: 15em;
-    width: 20em;
+    height: 12em;
+    width: 17em;
     outline: none;
-}
-h1,p{
-    position: sticky; 
-   
-    text-align: center;
-    color: white;
 
 }
