@@ -3,20 +3,22 @@
 
     <nav class="navbar bg-dark" style="display: block; margin: auto;">
         <div style="text-align: center; font-size: 2em; outline: none;">
-          <button class="btn btn-link" routerLink="/start">
-            <span class="glyphicon glyphicon-home bot"></span>
-          </button>
+            <button class="btn btn-link d-flex" routerLink="/start" style="float: left;">
+                <h3 class="rgb-effect">Catcrypt</h3> <span class="glyphicon glyphicon-home bot rgb-effect"></span>
+              </button>
+          
+
       
           <button (click)="showsend()" class="btn  nor" *ngIf="!activesend || activeget ">
-            Cat Sender POV
+        <h3>  Cat Sender POV</h3>  
           </button>
           <button (click)="showget()" class="btn  nor" *ngIf="!activeget || activesend ">
-            Cat Receiver POV
+            <h3 >    Cat Receiver POV</h3>
           </button>
  
         </div>
       </nav>
-    <h1 class="rgb-effect">Catcrypt</h1>
+
 <div class="container"  *ngIf="this.activesend == true">
 
     <section class="chatbox"#scrollframe >
@@ -67,10 +69,22 @@
     </section>
 
 
-    <details  style="color: white;font-size: 2em;" >
+    <details  style="color: white;font-size: 1.5em;" >
         <summary>Notes</summary>
         <h3> You can send a message in a regular manner, but if you want to conceal the message, you must use the Catcrypt. </h3>
      </details>
+     <details  style="color: white;font-size: 1.5em;">
+        <summary>Help</summary>
+        <h3> 
+        Meowell meowell Are you too lazy to type? Well, in that case, you can simply use this, you<b> LAZY HUMAN. </b></h3>
+            <div class="tran">
+                say something <input type="text" style="background-color: #40434e; width: 20em;" [(ngModel)]="inputText" (input)="updateTranslation()">
+                tranlated to <input type="text" style="background-color: #40434e ; width: 20em;"[value]="cattralated" readonly><button class="btn btn-primary copy" (click)="copyInputValue()">Copy</button>
+            </div>
+
+
+     </details>
+
 </div>
 <div class="container"  *ngIf="this.activeget == true">
 

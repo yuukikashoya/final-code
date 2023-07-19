@@ -239,4 +239,29 @@ showtable(){
   ngOnInit(): void {
   }
 
+  inputText= ''
+  cattralated= ''
+  updateTranslation() {
+    this.cattralated = '';
+
+    for (let i = 0; i < this.inputText.length; i++) {
+      const char = this.inputText[i];
+      const translatedChar = this.RecordMap[char];
+      if (translatedChar) {
+        this.cattralated += translatedChar + "*";
+      } else {
+        this.cattralated += char + "*";
+      }
+    }
+  
+  }
+
+  copyInputValue() {
+    const inputElement = document.createElement('input');
+    inputElement.value = this.cattralated;
+    document.body.appendChild(inputElement);
+    inputElement.select();
+    document.execCommand('copy');
+    document.body.removeChild(inputElement);
+  }
 }
