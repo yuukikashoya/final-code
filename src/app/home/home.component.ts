@@ -200,7 +200,7 @@ sendchat() {
 
      this.chat = ""
    this.changed= ""
-   this.formattedText
+   this.formattedText = ""
 
   
 }
