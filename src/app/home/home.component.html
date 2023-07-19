@@ -31,12 +31,14 @@
             <div class="msg-box">
               <div class="flr">
                 <div class="messages">
+                    <div class="d-flex">
                     <p class="msg" id="msg-1" style="text-align: justify;">
                     
                         <b>You send:</b>
-                        {{fromdatabase}} <br>
-                   
+
                       </p>
+                      <p [innerHTML]="formattedText" class="msg" id="msg-1" style="text-align: justify;"></p>
+</div>
     <br>
                   <p class="msg" id="msg-1" style="text-align: justify;">
                     

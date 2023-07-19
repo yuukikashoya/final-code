@@ -166,6 +166,7 @@ setTimeout(() => {
 
  }
  delayedFunction() {
+  this.formatText();
   this.decoded = "";  
            this.back = this.fromdatabase.split('*');
   for(let i = 0; i < this.back.length; i++){
@@ -236,8 +237,6 @@ showtable(){
 
 
 
-  ngOnInit(): void {
-  }
 
   inputText= ''
   cattralated= ''
@@ -263,5 +262,19 @@ showtable(){
     inputElement.select();
     document.execCommand('copy');
     document.body.removeChild(inputElement);
+  }
+
+  ngOnInit() {
+  
+  }
+
+  charactersPerLine = 60;
+  formattedText = ""
+  formatText() {
+  console.log(this.fromdatabase)
+    for (let i = 0; i < this.fromdatabase.length; i += this.charactersPerLine) {
+      this.formattedText += this.fromdatabase.substr(i, this.charactersPerLine) + '<br>';
+    }
+    this.formattedText = this.formattedText;
   }
 }
