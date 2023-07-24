@@ -39,7 +39,7 @@ h1{
   .chat-input {
       flex: 0 0 auto;
       height: 60px;
-      background: #40434e;
+      background: white;
       border-top: 1px solid #2671ff;
       box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
   }
@@ -49,11 +49,11 @@ h1{
       outline: 0 none;
       border: none;
       width: calc(100% - 60px);
-      color: white;
+      color: black;
       text-indent: 10px;
       font-size: 12pt;
       padding: 0;
-      background: #40434e;
+      background: white;
   }
   .chat-input button {
       float: right;

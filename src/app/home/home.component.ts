@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { formatDate } from '@angular/common';
 import { Database, ref, set } from '@angular/fire/database';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
@@ -9,6 +9,16 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 })
 export class HomeComponent implements OnInit {
 fromdatabase=""
+@ViewChild('chatWindow', { static: false }) chatWindow!: ElementRef;
+
+ngAfterViewChecked() {
+  this.scrollToBottom();
+}
+
+scrollToBottom() {
+  const chatWindowElement = this.chatWindow.nativeElement;
+  chatWindowElement.scrollTop = chatWindowElement.scrollHeight;
+}
 decoded=""
 date:any
  RecordMap: Record<any, string> = {
